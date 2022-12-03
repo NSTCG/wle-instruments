@@ -1,0 +1,3753 @@
+{
+    "objects": {
+        "14": {
+            "name": "Player",
+            "transformation": [
+                0.9999998,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.9999998,
+                0.0,
+                -2.5,
+                0.0,
+                1.8762869,
+                1.0
+            ],
+            "components": [
+                {
+                    "type": "wasd-controls",
+                    "wasd-controls": {
+                        "headObject": "17",
+                        "speed": 0.0099999
+                    }
+                },
+                {
+                    "type": "fixed-foveation"
+                },
+                {
+                    "type": "howler-audio-source",
+                    "howler-audio-source": {
+                        "loop": true,
+                        "autoplay": true,
+                        "volume": 0.5,
+                        "src": "sfx/nature.mp3"
+                    }
+                },
+                {
+                    "type": "howler-audio-listener"
+                }
+            ]
+        },
+        "17": {
+            "name": "NonVrCamera",
+            "parent": "205",
+            "components": [
+                {
+                    "type": "view"
+                },
+                {
+                    "type": "mouse-look"
+                },
+                {
+                    "type": "cursor",
+                    "cursor": {
+                        "collisionGroup": 0,
+                        "handedness": "none"
+                    }
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.1928946,
+                1.2478485,
+                0.3634531,
+                1.0
+            ]
+        },
+        "18": {
+            "name": "EyeLeft",
+            "parent": "205",
+            "components": [
+                {
+                    "type": "view"
+                },
+                {
+                    "type": "input",
+                    "input": {
+                        "type": "eye left"
+                    }
+                },
+                {
+                    "type": "howler-audio-listener"
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                -2.384185791015625e-7,
+                1.0
+            ]
+        },
+        "19": {
+            "name": "EyeRight",
+            "parent": "205",
+            "components": [
+                {
+                    "type": "view"
+                },
+                {
+                    "type": "input",
+                    "input": {
+                        "type": "eye right"
+                    }
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                -2.384185791015625e-7,
+                1.0
+            ]
+        },
+        "21": {
+            "name": "Light",
+            "components": [
+                {
+                    "type": "light",
+                    "light": {
+                        "attenuation": 0.1
+                    }
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                3.0,
+                2.0,
+                1.0
+            ]
+        },
+        "23": {
+            "name": "Light.000",
+            "components": [
+                {
+                    "type": "light",
+                    "light": {
+                        "attenuation": 0.1
+                    }
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                -1.0,
+                3.0,
+                -1.0,
+                1.0
+            ]
+        },
+        "126": {
+            "name": "CursorLeft",
+            "parent": "205",
+            "components": [
+                {
+                    "type": "cursor",
+                    "cursor": {
+                        "cursorObject": "127",
+                        "collisionGroup": 0,
+                        "cursorRayObject": "209",
+                        "cursorRayScalingAxis": "y"
+                    }
+                },
+                {
+                    "type": "input",
+                    "input": {
+                        "type": "ray left"
+                    }
+                },
+                {
+                    "type": "teleport",
+                    "teleport": {
+                        "floorGroup": 2,
+                        "camRoot": "14",
+                        "cam": "17",
+                        "teleportIndicatorMeshObject": "208",
+                        "indicatorYOffset": 0.0099999,
+                        "eyeLeft": "18",
+                        "eyeRight": "19"
+                    }
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                2.384185791015625e-7,
+                1.192092895507813e-7,
+                -2.384185791015625e-7,
+                1.0
+            ]
+        },
+        "127": {
+            "name": "3DCursorHitLeft",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "9",
+                        "material": "DefaultFontMaterial"
+                    }
+                }
+            ],
+            "transformation": [
+                0.0099999,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0099999,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0099999,
+                0.0,
+                0.0,
+                0.0388118,
+                1.5585095,
+                1.0
+            ],
+            "parent": null
+        },
+        "129": {
+            "name": "ControllerRight",
+            "parent": "205",
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                -2.384185791015625e-7,
+                1.0
+            ],
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "input",
+                    "input": {
+                        "type": "hand right"
+                    }
+                }
+            ]
+        },
+        "130": {
+            "name": "ControllerLeft",
+            "parent": "205",
+            "components": [
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                {
+                    "type": "input",
+                    "input": {
+                        "type": "hand left"
+                    }
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                -2.384185791015625e-7,
+                1.0
+            ]
+        },
+        "134": {
+            "link": {
+                "name": "Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "205",
+            "name": "HandLeft",
+            "components": [
+                {
+                    "type": "hand-tracking",
+                    "hand-tracking": {
+                        "handedness": "left",
+                        "handSkin": "133",
+                        "controllerToDeactivate": "130",
+                        "deactivateChildrenWithoutPose": true
+                    }
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                -2.384185791015625e-7,
+                1.0
+            ]
+        },
+        "135": {
+            "link": {
+                "name": "l_handMeshNode<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "134",
+            "components": [
+                {
+                    "active": true,
+                    "mesh": {
+                        "skin": "133",
+                        "material": "128"
+                    }
+                }
+            ]
+        },
+        "136": {
+            "link": {
+                "name": "xr_standard_trigger_pressed_max<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "134"
+        },
+        "137": {
+            "link": {
+                "name": "xr_standard_trigger_pressed_min<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "134"
+        },
+        "138": {
+            "link": {
+                "name": "xr_standard_trigger_pressed_value<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "134"
+        },
+        "139": {
+            "link": {
+                "name": "pinky-finger-tip<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "134",
+            "skin": "133"
+        },
+        "140": {
+            "link": {
+                "name": "pinky-finger-phalanx-distal<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "134",
+            "skin": "133"
+        },
+        "141": {
+            "link": {
+                "name": "pinky-finger-phalanx-intermediate<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "134",
+            "skin": "133"
+        },
+        "142": {
+            "link": {
+                "name": "pinky-finger-phalanx-proximal<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "134",
+            "skin": "133"
+        },
+        "143": {
+            "link": {
+                "name": "pinky-finger-metacarpal<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "134",
+            "skin": "133"
+        },
+        "144": {
+            "link": {
+                "name": "ring-finger-tip<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "134",
+            "skin": "133"
+        },
+        "145": {
+            "link": {
+                "name": "ring-finger-phalanx-distal<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "134",
+            "skin": "133"
+        },
+        "146": {
+            "link": {
+                "name": "ring-finger-phalanx-intermediate<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "134",
+            "skin": "133"
+        },
+        "147": {
+            "link": {
+                "name": "ring-finger-phalanx-proximal<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "134",
+            "skin": "133"
+        },
+        "148": {
+            "link": {
+                "name": "ring-finger-metacarpal<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "134",
+            "skin": "133"
+        },
+        "149": {
+            "link": {
+                "name": "middle-finger-tip<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "134",
+            "skin": "133"
+        },
+        "150": {
+            "link": {
+                "name": "middle-finger-phalanx-distal<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "134",
+            "skin": "133"
+        },
+        "151": {
+            "link": {
+                "name": "middle-finger-phalanx-intermediate<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "134",
+            "skin": "133"
+        },
+        "152": {
+            "link": {
+                "name": "middle-finger-phalanx-proximal<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "134",
+            "skin": "133"
+        },
+        "153": {
+            "link": {
+                "name": "middle-finger-metacarpal<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "134",
+            "skin": "133"
+        },
+        "154": {
+            "link": {
+                "name": "index-finger-tip<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "134",
+            "components": [
+                {
+                    "type": "finger-cursor"
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "sphere": {
+                            "radius": 0.0099999
+                        },
+                        "groups": 2
+                    }
+                }
+            ],
+            "skin": "133"
+        },
+        "155": {
+            "link": {
+                "name": "index-finger-phalanx-distal<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "134",
+            "skin": "133"
+        },
+        "156": {
+            "link": {
+                "name": "index-finger-phalanx-intermediate<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "134",
+            "skin": "133"
+        },
+        "157": {
+            "link": {
+                "name": "index-finger-phalanx-proximal<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "134",
+            "skin": "133"
+        },
+        "158": {
+            "link": {
+                "name": "index-finger-metacarpal<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "134",
+            "skin": "133"
+        },
+        "159": {
+            "link": {
+                "name": "thumb-tip<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "134",
+            "skin": "133"
+        },
+        "160": {
+            "link": {
+                "name": "thumb-phalanx-distal<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "134",
+            "skin": "133"
+        },
+        "161": {
+            "link": {
+                "name": "thumb-phalanx-proximal<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "134",
+            "skin": "133"
+        },
+        "162": {
+            "link": {
+                "name": "thumb-metacarpal<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "134",
+            "skin": "133"
+        },
+        "163": {
+            "link": {
+                "name": "wrist<Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "parent": "134",
+            "skin": "133"
+        },
+        "167": {
+            "link": {
+                "name": "Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "205",
+            "name": "HandRight",
+            "components": [
+                {
+                    "type": "hand-tracking",
+                    "hand-tracking": {
+                        "handedness": "right",
+                        "handSkin": "166",
+                        "controllerToDeactivate": "129"
+                    },
+                    "active": true
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                -2.384185791015625e-7,
+                1.0
+            ]
+        },
+        "168": {
+            "link": {
+                "name": "r_handMeshNode<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "167",
+            "components": [
+                {
+                    "mesh": {
+                        "skin": "166",
+                        "material": "128"
+                    }
+                }
+            ]
+        },
+        "169": {
+            "link": {
+                "name": "wrist<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "167",
+            "skin": "166"
+        },
+        "170": {
+            "link": {
+                "name": "thumb-metacarpal<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "167",
+            "skin": "166"
+        },
+        "171": {
+            "link": {
+                "name": "thumb-phalanx-proximal<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "167",
+            "skin": "166"
+        },
+        "172": {
+            "link": {
+                "name": "thumb-phalanx-distal<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "167",
+            "skin": "166"
+        },
+        "173": {
+            "link": {
+                "name": "thumb-tip<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "167",
+            "skin": "166"
+        },
+        "174": {
+            "link": {
+                "name": "index-finger-metacarpal<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "167",
+            "skin": "166"
+        },
+        "175": {
+            "link": {
+                "name": "index-finger-phalanx-proximal<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "167",
+            "skin": "166"
+        },
+        "176": {
+            "link": {
+                "name": "index-finger-phalanx-intermediate<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "167",
+            "skin": "166"
+        },
+        "177": {
+            "link": {
+                "name": "index-finger-phalanx-distal<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "167",
+            "skin": "166"
+        },
+        "178": {
+            "link": {
+                "name": "index-finger-tip<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "167",
+            "components": [
+                {
+                    "type": "collision",
+                    "collision": {
+                        "sphere": {
+                            "radius": 0.0099999
+                        },
+                        "groups": 2
+                    }
+                },
+                {
+                    "type": "finger-cursor"
+                }
+            ],
+            "skin": "166"
+        },
+        "179": {
+            "link": {
+                "name": "middle-finger-metacarpal<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "167",
+            "skin": "166"
+        },
+        "180": {
+            "link": {
+                "name": "middle-finger-phalanx-proximal<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "167",
+            "skin": "166"
+        },
+        "181": {
+            "link": {
+                "name": "middle-finger-phalanx-intermediate<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "167",
+            "skin": "166"
+        },
+        "182": {
+            "link": {
+                "name": "middle-finger-phalanx-distal<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "167",
+            "skin": "166"
+        },
+        "183": {
+            "link": {
+                "name": "middle-finger-tip<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "167",
+            "skin": "166"
+        },
+        "184": {
+            "link": {
+                "name": "ring-finger-metacarpal<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "167",
+            "skin": "166"
+        },
+        "185": {
+            "link": {
+                "name": "ring-finger-phalanx-proximal<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "167",
+            "skin": "166"
+        },
+        "186": {
+            "link": {
+                "name": "ring-finger-phalanx-intermediate<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "167",
+            "skin": "166"
+        },
+        "187": {
+            "link": {
+                "name": "ring-finger-phalanx-distal<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "167",
+            "skin": "166"
+        },
+        "188": {
+            "link": {
+                "name": "ring-finger-tip<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "167",
+            "skin": "166"
+        },
+        "189": {
+            "link": {
+                "name": "pinky-finger-metacarpal<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "167",
+            "skin": "166"
+        },
+        "190": {
+            "link": {
+                "name": "pinky-finger-phalanx-proximal<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "167",
+            "skin": "166"
+        },
+        "191": {
+            "link": {
+                "name": "pinky-finger-phalanx-intermediate<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "167",
+            "skin": "166"
+        },
+        "192": {
+            "link": {
+                "name": "pinky-finger-phalanx-distal<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "167",
+            "skin": "166"
+        },
+        "193": {
+            "link": {
+                "name": "pinky-finger-tip<Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "parent": "167",
+            "skin": "166"
+        },
+        "205": {
+            "name": "TrackedSpace",
+            "parent": "14",
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        "208": {
+            "link": {
+                "name": "TeleportIndicator",
+                "file": "models\\teleport-indicator.glb"
+            },
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0099999,
+                1.3311299,
+                1.0
+            ]
+        },
+        "209": {
+            "name": "CursorRayLeft",
+            "parent": "126",
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                2.384185791015625e-7,
+                1.0
+            ]
+        },
+        "210": {
+            "name": "CuresorRayMeshLeft",
+            "parent": "209",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "10",
+                        "material": "DefaultFontMaterial"
+                    }
+                }
+            ],
+            "transformation": [
+                0.0049999,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0001057,
+                0.3500003,
+                0.0,
+                0.0,
+                -0.005,
+                0.0000015,
+                0.0,
+                2.384192896442983e-7,
+                0.0002447,
+                0.0,
+                1.0
+            ]
+        },
+        "212": {
+            "name": "CursorRight",
+            "parent": "205",
+            "components": [
+                {
+                    "type": "cursor",
+                    "cursor": {
+                        "cursorObject": "215",
+                        "collisionGroup": 0,
+                        "cursorRayObject": "213",
+                        "cursorRayScalingAxis": "y"
+                    }
+                },
+                {
+                    "type": "input",
+                    "input": {
+                        "type": "ray right"
+                    }
+                },
+                {
+                    "type": "teleport",
+                    "teleport": {
+                        "floorGroup": 2,
+                        "camRoot": "14",
+                        "cam": "17",
+                        "teleportIndicatorMeshObject": "208",
+                        "indicatorYOffset": 0.0099999,
+                        "eyeLeft": "18",
+                        "eyeRight": "19"
+                    }
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                -2.384185791015625e-7,
+                1.0
+            ]
+        },
+        "213": {
+            "name": "CursorRayRight",
+            "parent": "212",
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                2.384185791015625e-7,
+                1.0
+            ]
+        },
+        "214": {
+            "name": "CuresorRayMeshRight",
+            "parent": "213",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "10",
+                        "material": "DefaultFontMaterial"
+                    }
+                }
+            ],
+            "transformation": [
+                0.0049999,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                -0.0001711,
+                0.3499999,
+                0.0,
+                0.0,
+                -0.0049999,
+                -0.0000024,
+                0.0,
+                2.384185791015625e-7,
+                0.0002447,
+                0.0,
+                1.0
+            ]
+        },
+        "215": {
+            "name": "3DCursorHitRight",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "9",
+                        "material": "DefaultFontMaterial"
+                    }
+                }
+            ],
+            "transformation": [
+                0.0099999,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0099999,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0099999,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "parent": null
+        },
+        "242": {
+            "name": "Instrument",
+            "parent": null,
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0,
+                0.0,
+                0.0,
+                0.3629491,
+                0.853452,
+                1.0
+            ]
+        },
+        "243": {
+            "name": "Panel",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "195",
+                        "material": "202"
+                    }
+                }
+            ],
+            "transformation": [
+                0.2464042,
+                -1.9557772645839577e-7,
+                -0.0422487,
+                0.0,
+                0.0182944,
+                0.0624983,
+                0.106697,
+                0.0,
+                0.0211237,
+                -0.2165084,
+                0.123199,
+                0.0,
+                -2.3168776,
+                0.8415395,
+                0.6847112,
+                1.0
+            ],
+            "parent": "242"
+        },
+        "244": {
+            "name": "Button",
+            "parent": "243",
+            "transformation": [
+                0.4,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.4999999,
+                -0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.3,
+                0.0,
+                0.0,
+                0.057682,
+                0.1754341,
+                1.0
+            ],
+            "components": [
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "box",
+                        "box": {
+                            "extents": [
+                                0.0974999,
+                                0.025,
+                                0.045
+                            ]
+                        },
+                        "groups": 251
+                    }
+                },
+                {
+                    "type": "cursor-target"
+                },
+                {
+                    "type": "button",
+                    "button": {
+                        "buttonMeshObject": "196",
+                        "hoverMaterial": "203"
+                    }
+                }
+            ]
+        },
+        "245": {
+            "link": {
+                "name": "Cube",
+                "file": "models\\button.glb"
+            },
+            "parent": "244",
+            "components": [
+                {
+                    "mesh": {
+                        "material": "26"
+                    }
+                }
+            ],
+            "name": "ButtonMesh",
+            "transformation": [
+                1.3501019,
+                -2.086162567138672e-7,
+                2.086162567138672e-7,
+                0.0,
+                7.450580596923828e-8,
+                0.9999973,
+                0.0000012,
+                0.0,
+                -1.043081283569336e-7,
+                -0.0000018,
+                0.9999976,
+                0.0,
+                -0.1308975,
+                0.3122386,
+                0.0156583,
+                1.0
+            ]
+        },
+        "246": {
+            "name": "Title",
+            "parent": "243",
+            "components": [
+                {
+                    "type": "text",
+                    "text": {
+                        "text": "Welcome to\nWLE Instruments",
+                        "material": "201"
+                    }
+                }
+            ],
+            "transformation": [
+                1.5,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0021012,
+                -2.9999995,
+                0.0,
+                0.0,
+                1.4999996,
+                0.0010506,
+                0.0,
+                -0.0000023,
+                0.1554994,
+                -0.3034151,
+                1.0
+            ]
+        },
+        "247": {
+            "name": "Xylophone",
+            "transformation": [
+                -0.0084512,
+                0.0,
+                -0.0492812,
+                0.0,
+                0.0,
+                0.1,
+                0.0,
+                0.0,
+                0.0985624,
+                0.0,
+                -0.0169024,
+                0.0,
+                -2.1915128,
+                0.7291158,
+                0.8945221,
+                1.0
+            ],
+            "parent": "242",
+            "components": [
+                {
+                    "type": "web-midi-api.js",
+                    "active": true
+                }
+            ]
+        },
+        "248": {
+            "name": "bars",
+            "parent": "247"
+        },
+        "249": {
+            "name": "C4",
+            "parent": "248",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "8",
+                        "material": "22"
+                    }
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "box",
+                        "aabb": {
+                            "extents": [
+                                0.05,
+                                0.0299999,
+                                0.0199999
+                            ]
+                        },
+                        "groups": 251,
+                        "box": {
+                            "extents": [
+                                0.05,
+                                0.0299999,
+                                0.0199999
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "button",
+                    "button": {
+                        "buttonMeshObject": "232",
+                        "hoverMaterial": "26"
+                    }
+                },
+                {
+                    "type": "cursor-target"
+                }
+            ],
+            "transformation": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.1,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.15,
+                0.0,
+                0.0,
+                4.76837158203125e-7,
+                1.0,
+                1.0
+            ]
+        },
+        "250": {
+            "name": "B3",
+            "parent": "248",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "8",
+                        "material": "20"
+                    }
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "box",
+                        "aabb": {
+                            "extents": [
+                                0.0599999,
+                                0.0299999,
+                                0.0199999
+                            ]
+                        },
+                        "groups": 251,
+                        "box": {
+                            "extents": [
+                                0.0599999,
+                                0.0299999,
+                                0.0199999
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "button",
+                    "button": {
+                        "buttonMeshObject": "233",
+                        "hoverMaterial": "26"
+                    }
+                },
+                {
+                    "type": "cursor-target"
+                }
+            ],
+            "transformation": [
+                1.2,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.1,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.15,
+                0.0,
+                -0.0241661,
+                0.0000228,
+                0.3422908,
+                1.0
+            ]
+        },
+        "251": {
+            "name": "A3",
+            "parent": "248",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "8",
+                        "material": "25"
+                    }
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "box",
+                        "aabb": {
+                            "extents": [
+                                0.07,
+                                0.0299999,
+                                0.0199999
+                            ]
+                        },
+                        "groups": 251,
+                        "box": {
+                            "extents": [
+                                0.07,
+                                0.0299999,
+                                0.0199999
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "button",
+                    "button": {
+                        "buttonMeshObject": "234",
+                        "hoverMaterial": "26"
+                    }
+                },
+                {
+                    "type": "cursor-target"
+                }
+            ],
+            "transformation": [
+                1.3999998,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.1,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.15,
+                0.0,
+                0.0184822,
+                0.0,
+                -0.2000007,
+                1.0
+            ]
+        },
+        "252": {
+            "name": "G3",
+            "parent": "248",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "8",
+                        "material": "26"
+                    }
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "box",
+                        "aabb": {
+                            "extents": [
+                                0.0799999,
+                                0.0299999,
+                                0.0199999
+                            ]
+                        },
+                        "groups": 251,
+                        "box": {
+                            "extents": [
+                                0.0799999,
+                                0.0299999,
+                                0.0199999
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "button",
+                    "button": {
+                        "buttonMeshObject": "235",
+                        "hoverMaterial": "26"
+                    }
+                },
+                {
+                    "type": "cursor-target"
+                }
+            ],
+            "transformation": [
+                1.6000001,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.1,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.15,
+                0.0,
+                -0.0713386,
+                0.0,
+                -0.8000011,
+                1.0
+            ]
+        },
+        "253": {
+            "name": "F3",
+            "parent": "248",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "8",
+                        "material": "22"
+                    }
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "box",
+                        "aabb": {
+                            "extents": [
+                                0.09,
+                                0.0299999,
+                                0.0199999
+                            ]
+                        },
+                        "groups": 251,
+                        "box": {
+                            "extents": [
+                                0.09,
+                                0.0299999,
+                                0.0199999
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "button",
+                    "button": {
+                        "buttonMeshObject": "236",
+                        "hoverMaterial": "26"
+                    }
+                },
+                {
+                    "type": "cursor-target"
+                }
+            ],
+            "transformation": [
+                1.7999999,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.1,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.15,
+                0.0,
+                0.0,
+                0.0,
+                -1.3999999,
+                1.0
+            ]
+        },
+        "254": {
+            "name": "E3",
+            "parent": "248",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "8",
+                        "material": "25"
+                    }
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "box",
+                        "aabb": {
+                            "extents": [
+                                0.1,
+                                0.0299999,
+                                0.0199999
+                            ]
+                        },
+                        "groups": 251,
+                        "box": {
+                            "extents": [
+                                0.1,
+                                0.0299999,
+                                0.0199999
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "button",
+                    "button": {
+                        "buttonMeshObject": "237",
+                        "hoverMaterial": "26"
+                    }
+                },
+                {
+                    "type": "cursor-target"
+                }
+            ],
+            "transformation": [
+                2.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.1,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.15,
+                0.0,
+                0.0315437,
+                0.0,
+                -1.9999976,
+                1.0
+            ]
+        },
+        "255": {
+            "name": "D3",
+            "parent": "248",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "8",
+                        "material": "128"
+                    }
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "box",
+                        "aabb": {
+                            "extents": [
+                                0.1099999,
+                                0.0299999,
+                                0.0199999
+                            ]
+                        },
+                        "groups": 251,
+                        "box": {
+                            "extents": [
+                                0.1099999,
+                                0.0299999,
+                                0.0199999
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "button",
+                    "button": {
+                        "buttonMeshObject": "238",
+                        "hoverMaterial": "26"
+                    }
+                },
+                {
+                    "type": "cursor-target"
+                }
+            ],
+            "transformation": [
+                2.2,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.1,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.15,
+                0.0,
+                -0.0000038,
+                0.0000038,
+                -2.6000003,
+                1.0
+            ]
+        },
+        "256": {
+            "name": "C3",
+            "parent": "248",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "8",
+                        "material": "202"
+                    }
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "sphere": {
+                            "radius": 0.1199999
+                        },
+                        "collider": "box",
+                        "aabb": {
+                            "extents": [
+                                0.1199999,
+                                0.0299999,
+                                0.0199999
+                            ]
+                        },
+                        "groups": 251,
+                        "box": {
+                            "extents": [
+                                0.1199999,
+                                0.0299999,
+                                0.0199999
+                            ]
+                        }
+                    }
+                },
+                {
+                    "type": "button",
+                    "button": {
+                        "buttonMeshObject": "239",
+                        "hoverMaterial": "26"
+                    }
+                },
+                {
+                    "type": "cursor-target"
+                }
+            ],
+            "transformation": [
+                2.4,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.1,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.15,
+                0.0,
+                0.0491256,
+                0.0,
+                -3.1999998,
+                1.0
+            ]
+        },
+        "257": {
+            "name": "Base",
+            "parent": "247"
+        },
+        "258": {
+            "name": "StandLeft",
+            "parent": "257",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "8",
+                        "material": "202"
+                    }
+                }
+            ],
+            "transformation": [
+                0.2980715,
+                0.0,
+                -0.033961,
+                0.0,
+                0.0,
+                0.2,
+                0.0,
+                0.0,
+                0.2603677,
+                0.0,
+                2.2852151,
+                0.0,
+                -1.0000185,
+                -0.3,
+                -1.1,
+                1.0
+            ]
+        },
+        "259": {
+            "name": "StandLeft",
+            "parent": "257",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "8",
+                        "material": "202"
+                    }
+                }
+            ],
+            "transformation": [
+                0.2980715,
+                0.0,
+                0.033961,
+                0.0,
+                0.0,
+                0.2,
+                0.0,
+                0.0,
+                -0.2603678,
+                0.0,
+                2.2852151,
+                0.0,
+                0.9999885,
+                -0.3,
+                -1.1,
+                1.0
+            ]
+        },
+        "260": {
+            "name": "ToneName",
+            "components": [
+                {
+                    "type": "text",
+                    "text": {
+                        "text": "Default Tone"
+                    }
+                }
+            ],
+            "transformation": [
+                -0.0000019,
+                -0.0000034,
+                4.4799966,
+                0.0,
+                1.9308911,
+                3.3444015,
+                0.0000034,
+                0.0,
+                -4.9822354,
+                2.8764948,
+                0.0,
+                0.0,
+                3.4517478,
+                0.9784361,
+                -0.9863311,
+                1.0
+            ],
+            "parent": "247"
+        },
+        "261": {
+            "name": "Next",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "11",
+                        "material": "22"
+                    }
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "sphere",
+                        "sphere": {
+                            "radius": 0.0199999
+                        },
+                        "groups": 251
+                    },
+                    "active": true
+                },
+                {
+                    "type": "cursor-target"
+                },
+                {
+                    "type": "button",
+                    "button": {
+                        "buttonMeshObject": "247",
+                        "hoverMaterial": "20"
+                    }
+                }
+            ],
+            "transformation": [
+                0.2715913,
+                0.2352049,
+                0.0,
+                0.0,
+                -0.2138294,
+                0.0617272,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.1849973,
+                0.0,
+                4.0489006,
+                0.782978,
+                1.1195669,
+                1.0
+            ],
+            "parent": "247"
+        },
+        "262": {
+            "name": "Text",
+            "parent": "261",
+            "components": [
+                {
+                    "type": "text",
+                    "text": {
+                        "text": "Next\n"
+                    }
+                }
+            ],
+            "transformation": [
+                0.0,
+                0.0000024,
+                6.8270068,
+                0.0,
+                7.5059351,
+                -8.947772016654199e-7,
+                0.0,
+                0.0,
+                0.000305,
+                2558.6469726,
+                -0.000915,
+                0.0,
+                0.0550422,
+                1.115036,
+                0.0242042,
+                1.0
+            ]
+        },
+        "263": {
+            "name": "Previous",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "11",
+                        "material": "25"
+                    }
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "collider": "sphere",
+                        "sphere": {
+                            "radius": 0.0199999
+                        },
+                        "groups": 251
+                    },
+                    "active": true
+                },
+                {
+                    "type": "cursor-target"
+                },
+                {
+                    "type": "button",
+                    "button": {
+                        "buttonMeshObject": "248",
+                        "hoverMaterial": "20"
+                    }
+                }
+            ],
+            "transformation": [
+                0.2679942,
+                0.2320897,
+                0.0,
+                0.0,
+                -0.1325964,
+                0.1531091,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.16835,
+                0.0,
+                3.9677829,
+                0.8265252,
+                0.6280776,
+                1.0
+            ],
+            "parent": "247"
+        },
+        "264": {
+            "name": "Text",
+            "parent": "263",
+            "components": [
+                {
+                    "type": "text",
+                    "text": {
+                        "text": "Previous\n"
+                    }
+                }
+            ],
+            "transformation": [
+                -0.0000043,
+                0.0000019,
+                4.0962347,
+                0.0,
+                8.3637447,
+                -0.0000309,
+                0.0000089,
+                0.0,
+                0.0254606,
+                6889.6704101,
+                -0.0032852,
+                0.0,
+                0.0763816,
+                1.05307,
+                0.0346052,
+                1.0
+            ]
+        },
+        "265": {
+            "name": "stickRight",
+            "parent": "129",
+            "transformation": [
+                3.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                2.2981336,
+                -1.928363,
+                0.0,
+                0.0,
+                1.928363,
+                2.2981336,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        },
+        "266": {
+            "name": "Mesh",
+            "parent": "265",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "9",
+                        "material": "25"
+                    }
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "sphere": {
+                            "radius": 0.0299999
+                        },
+                        "groups": 251
+                    }
+                },
+                {
+                    "type": "stick"
+                }
+            ],
+            "transformation": [
+                0.01,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.01,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.01,
+                0.0,
+                0.0,
+                0.0,
+                -0.0544705,
+                1.0
+            ]
+        },
+        "267": {
+            "name": "Mesh.000",
+            "parent": "265",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "11",
+                        "material": "202"
+                    }
+                }
+            ],
+            "transformation": [
+                0.005548,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                -0.0,
+                -0.0499999,
+                0.0,
+                0.0,
+                0.0055478,
+                -0.0,
+                0.0,
+                2.384185791015625e-7,
+                0.0000011,
+                1.1920928955078125e-7,
+                1.0
+            ]
+        },
+        "268": {
+            "name": "stickLeft",
+            "parent": "130",
+            "transformation": [
+                3.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                2.2981333,
+                -1.9283628,
+                0.0,
+                0.0,
+                1.9283628,
+                2.2981333,
+                0.0,
+                2.384185791015625e-7,
+                1.1920928955078125e-7,
+                0.0,
+                1.0
+            ]
+        },
+        "269": {
+            "name": "Mesh",
+            "parent": "268",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "9",
+                        "material": "26"
+                    }
+                },
+                {
+                    "type": "collision",
+                    "collision": {
+                        "sphere": {
+                            "radius": 0.0299999
+                        },
+                        "groups": 251
+                    }
+                },
+                {
+                    "type": "stick"
+                }
+            ],
+            "transformation": [
+                0.01,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.01,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.01,
+                0.0,
+                0.0,
+                0.0,
+                -0.0549861,
+                1.0
+            ]
+        },
+        "270": {
+            "name": "Mesh.000",
+            "parent": "268",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "11",
+                        "material": "202"
+                    }
+                }
+            ],
+            "transformation": [
+                0.0055479,
+                -0.0,
+                0.0,
+                0.0,
+                0.0,
+                -0.0,
+                -0.0499999,
+                0.0,
+                0.0,
+                0.0055478,
+                0.0,
+                0.0,
+                -0.000004,
+                0.0000011,
+                1.788139343261719e-7,
+                1.0
+            ]
+        },
+        "271": {
+            "name": "Empty",
+            "parent": "242",
+            "transformation": [
+                -1.043081283569336e-7,
+                -3.725290298461914e-8,
+                0.25,
+                0.0,
+                -0.108253,
+                0.0624996,
+                -3.352753452645629e-8,
+                0.0,
+                -0.1249995,
+                -0.2165061,
+                -8.94068250545388e-8,
+                0.0,
+                -2.1401691,
+                0.8415212,
+                0.7455458,
+                1.0
+            ]
+        },
+        "272": {
+            "name": "Env",
+            "transformation": [
+                0.5005613,
+                0.0,
+                -0.0933977,
+                0.0,
+                0.0,
+                0.5092,
+                0.0,
+                0.0,
+                0.0933977,
+                0.0,
+                0.5005613,
+                0.0,
+                -1.037806,
+                6.8496403,
+                -3.1811683,
+                1.0
+            ]
+        },
+        "329": {
+            "link": {
+                "name": "Sketchfab_model",
+                "file": "models\\baker_and_the_bridge.glb"
+            },
+            "parent": "272"
+        },
+        "330": {
+            "link": {
+                "name": "aaaf165606c34fb7ae5f218755c718ac.fbx<Sketchfab_model",
+                "file": "models\\baker_and_the_bridge.glb"
+            },
+            "parent": "329"
+        },
+        "331": {
+            "link": {
+                "name": "RootNode<aaaf165606c34fb7ae5f218755c718ac.fbx<Sketchfab_model",
+                "file": "models\\baker_and_the_bridge.glb"
+            },
+            "parent": "330"
+        },
+        "332": {
+            "link": {
+                "name": "characters<RootNode<aaaf165606c34fb7ae5f218755c718ac.fbx<Sketchfab_model",
+                "file": "models\\baker_and_the_bridge.glb"
+            },
+            "parent": "331"
+        },
+        "333": {
+            "link": {
+                "name": "characters_STONE_a_0<characters<RootNode<aaaf165606c34fb7ae5f218755c718ac.fbx<Sketchfab_model",
+                "file": "models\\baker_and_the_bridge.glb"
+            },
+            "parent": "332"
+        },
+        "334": {
+            "link": {
+                "name": "characters_STONE_a_0<characters<RootNode<aaaf165606c34fb7ae5f218755c718ac.fbx<Sketchfab_model",
+                "file": "models\\baker_and_the_bridge.glb"
+            },
+            "parent": "332"
+        },
+        "335": {
+            "link": {
+                "name": "characters.001<RootNode<aaaf165606c34fb7ae5f218755c718ac.fbx<Sketchfab_model",
+                "file": "models\\baker_and_the_bridge.glb"
+            },
+            "parent": "331"
+        },
+        "336": {
+            "link": {
+                "name": "characters.001_charcters_0<characters.001<RootNode<aaaf165606c34fb7ae5f218755c718ac.fbx<Sketchfab_model",
+                "file": "models\\baker_and_the_bridge.glb"
+            },
+            "parent": "335"
+        },
+        "337": {
+            "link": {
+                "name": "characters.002<RootNode<aaaf165606c34fb7ae5f218755c718ac.fbx<Sketchfab_model",
+                "file": "models\\baker_and_the_bridge.glb"
+            },
+            "parent": "331"
+        },
+        "338": {
+            "link": {
+                "name": "characters.002_watermill_0<characters.002<RootNode<aaaf165606c34fb7ae5f218755c718ac.fbx<Sketchfab_model",
+                "file": "models\\baker_and_the_bridge.glb"
+            },
+            "parent": "337"
+        },
+        "339": {
+            "link": {
+                "name": "characters.003<RootNode<aaaf165606c34fb7ae5f218755c718ac.fbx<Sketchfab_model",
+                "file": "models\\baker_and_the_bridge.glb"
+            },
+            "parent": "331"
+        },
+        "340": {
+            "link": {
+                "name": "characters.003_terrain_left_0<characters.003<RootNode<aaaf165606c34fb7ae5f218755c718ac.fbx<Sketchfab_model",
+                "file": "models\\baker_and_the_bridge.glb"
+            },
+            "parent": "339"
+        },
+        "341": {
+            "link": {
+                "name": "characters.004<RootNode<aaaf165606c34fb7ae5f218755c718ac.fbx<Sketchfab_model",
+                "file": "models\\baker_and_the_bridge.glb"
+            },
+            "parent": "331"
+        },
+        "342": {
+            "link": {
+                "name": "characters.004_house_0<characters.004<RootNode<aaaf165606c34fb7ae5f218755c718ac.fbx<Sketchfab_model",
+                "file": "models\\baker_and_the_bridge.glb"
+            },
+            "parent": "341"
+        },
+        "343": {
+            "link": {
+                "name": "characters.005<RootNode<aaaf165606c34fb7ae5f218755c718ac.fbx<Sketchfab_model",
+                "file": "models\\baker_and_the_bridge.glb"
+            },
+            "parent": "331"
+        },
+        "344": {
+            "link": {
+                "name": "characters.005_bridge_0<characters.005<RootNode<aaaf165606c34fb7ae5f218755c718ac.fbx<Sketchfab_model",
+                "file": "models\\baker_and_the_bridge.glb"
+            },
+            "parent": "343"
+        },
+        "345": {
+            "link": {
+                "name": "characters.006<RootNode<aaaf165606c34fb7ae5f218755c718ac.fbx<Sketchfab_model",
+                "file": "models\\baker_and_the_bridge.glb"
+            },
+            "parent": "331"
+        },
+        "346": {
+            "link": {
+                "name": "characters.006_tree_0<characters.006<RootNode<aaaf165606c34fb7ae5f218755c718ac.fbx<Sketchfab_model",
+                "file": "models\\baker_and_the_bridge.glb"
+            },
+            "parent": "345"
+        },
+        "347": {
+            "link": {
+                "name": "characters.007<RootNode<aaaf165606c34fb7ae5f218755c718ac.fbx<Sketchfab_model",
+                "file": "models\\baker_and_the_bridge.glb"
+            },
+            "parent": "331"
+        },
+        "348": {
+            "link": {
+                "name": "characters.007_bush_0<characters.007<RootNode<aaaf165606c34fb7ae5f218755c718ac.fbx<Sketchfab_model",
+                "file": "models\\baker_and_the_bridge.glb"
+            },
+            "parent": "347"
+        },
+        "349": {
+            "link": {
+                "name": "characters.007_bush_0<characters.007<RootNode<aaaf165606c34fb7ae5f218755c718ac.fbx<Sketchfab_model",
+                "file": "models\\baker_and_the_bridge.glb"
+            },
+            "parent": "347"
+        },
+        "350": {
+            "link": {
+                "name": "characters.008<RootNode<aaaf165606c34fb7ae5f218755c718ac.fbx<Sketchfab_model",
+                "file": "models\\baker_and_the_bridge.glb"
+            },
+            "parent": "331"
+        },
+        "351": {
+            "link": {
+                "name": "characters.008_water_0<characters.008<RootNode<aaaf165606c34fb7ae5f218755c718ac.fbx<Sketchfab_model",
+                "file": "models\\baker_and_the_bridge.glb"
+            },
+            "parent": "350"
+        },
+        "352": {
+            "link": {
+                "name": "characters.009<RootNode<aaaf165606c34fb7ae5f218755c718ac.fbx<Sketchfab_model",
+                "file": "models\\baker_and_the_bridge.glb"
+            },
+            "parent": "331"
+        },
+        "353": {
+            "link": {
+                "name": "characters.009_terrain_right_0<characters.009<RootNode<aaaf165606c34fb7ae5f218755c718ac.fbx<Sketchfab_model",
+                "file": "models\\baker_and_the_bridge.glb"
+            },
+            "parent": "352"
+        },
+        "354": {
+            "link": {
+                "name": "characters.010<RootNode<aaaf165606c34fb7ae5f218755c718ac.fbx<Sketchfab_model",
+                "file": "models\\baker_and_the_bridge.glb"
+            },
+            "parent": "331"
+        },
+        "355": {
+            "link": {
+                "name": "characters.010_wheat_0<characters.010<RootNode<aaaf165606c34fb7ae5f218755c718ac.fbx<Sketchfab_model",
+                "file": "models\\baker_and_the_bridge.glb"
+            },
+            "parent": "354"
+        },
+        "357": {
+            "name": "Mesh.001",
+            "parent": "272",
+            "components": [
+                {
+                    "type": "mesh",
+                    "mesh": {
+                        "mesh": "9",
+                        "material": "359"
+                    }
+                }
+            ],
+            "transformation": [
+                53.7680168,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                53.7680168,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                53.7680168,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ]
+        }
+    },
+    "meshes": {
+        "7": {
+            "link": {
+                "name": "PrimitivePlane",
+                "file": "default"
+            }
+        },
+        "8": {
+            "link": {
+                "name": "PrimitiveCube",
+                "file": "default"
+            }
+        },
+        "9": {
+            "link": {
+                "name": "PrimitiveSphere",
+                "file": "default"
+            }
+        },
+        "10": {
+            "link": {
+                "name": "PrimitiveCone",
+                "file": "default"
+            }
+        },
+        "11": {
+            "link": {
+                "name": "PrimitiveCylinder",
+                "file": "default"
+            }
+        },
+        "12": {
+            "link": {
+                "name": "PrimitiveCircle",
+                "file": "default"
+            }
+        },
+        "47": {
+            "link": {
+                "name": "controller_plyShape",
+                "file": "models\\oculus-touch-v2-left.glb"
+            }
+        },
+        "48": {
+            "link": {
+                "name": "controller_plyShape.003",
+                "file": "models\\oculus-touch-v2-left.glb"
+            }
+        },
+        "49": {
+            "link": {
+                "name": "controller_plyShape.005",
+                "file": "models\\oculus-touch-v2-left.glb"
+            }
+        },
+        "50": {
+            "link": {
+                "name": "controller_plyShape.006",
+                "file": "models\\oculus-touch-v2-left.glb"
+            }
+        },
+        "51": {
+            "link": {
+                "name": "controller_plyShape.004",
+                "file": "models\\oculus-touch-v2-left.glb"
+            }
+        },
+        "52": {
+            "link": {
+                "name": "controller_plyShape.002",
+                "file": "models\\oculus-touch-v2-left.glb"
+            }
+        },
+        "89": {
+            "link": {
+                "name": "controller_plyShape.004",
+                "file": "models\\oculus-touch-v2-right.glb"
+            }
+        },
+        "90": {
+            "link": {
+                "name": "controller_plyShape.005",
+                "file": "models\\oculus-touch-v2-right.glb"
+            }
+        },
+        "91": {
+            "link": {
+                "name": "controller_plyShape",
+                "file": "models\\oculus-touch-v2-right.glb"
+            }
+        },
+        "92": {
+            "link": {
+                "name": "controller_plyShape.002",
+                "file": "models\\oculus-touch-v2-right.glb"
+            }
+        },
+        "93": {
+            "link": {
+                "name": "controller_plyShape.003",
+                "file": "models\\oculus-touch-v2-right.glb"
+            }
+        },
+        "94": {
+            "link": {
+                "name": "controller_plyShape.001",
+                "file": "models\\oculus-touch-v2-right.glb"
+            }
+        },
+        "132": {
+            "link": {
+                "name": "Mesh",
+                "file": "models\\hand-left.glb"
+            },
+            "name": "HandLeft"
+        },
+        "165": {
+            "link": {
+                "name": "Mesh.001",
+                "file": "models\\hand-right.glb"
+            },
+            "name": "HandRight"
+        },
+        "195": {
+            "link": {
+                "name": "Cube.001",
+                "file": "models\\button.glb"
+            },
+            "name": "Button"
+        },
+        "207": {
+            "link": {
+                "name": "TeleportIndicator",
+                "file": "models\\teleport-indicator.glb"
+            }
+        },
+        "314": {
+            "link": {
+                "name": "characters_STONE_a_0",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "315": {
+            "link": {
+                "name": "characters_STONE_a_0.0",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "316": {
+            "link": {
+                "name": "characters.001_charcters_0",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "317": {
+            "link": {
+                "name": "characters.001_charcters_0-uv1",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "318": {
+            "link": {
+                "name": "characters.002_watermill_0",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "319": {
+            "link": {
+                "name": "characters.003_terrain_left_0",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "320": {
+            "link": {
+                "name": "characters.004_house_0",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "321": {
+            "link": {
+                "name": "characters.004_house_0-uv1",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "322": {
+            "link": {
+                "name": "characters.005_bridge_0",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "323": {
+            "link": {
+                "name": "characters.006_tree_0",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "324": {
+            "link": {
+                "name": "characters.007_bush_0",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "325": {
+            "link": {
+                "name": "characters.007_bush_0.0",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "326": {
+            "link": {
+                "name": "characters.008_water_0",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "327": {
+            "link": {
+                "name": "characters.009_terrain_right_0",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "328": {
+            "link": {
+                "name": "characters.010_wheat_0",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        }
+    },
+    "textures": {
+        "44": {
+            "link": {
+                "name": "texture_0",
+                "file": "models\\oculus-touch-v2-left.glb"
+            }
+        },
+        "45": {
+            "link": {
+                "name": "texture_1",
+                "file": "models\\oculus-touch-v2-left.glb"
+            }
+        },
+        "86": {
+            "link": {
+                "name": "texture_0",
+                "file": "models\\oculus-touch-v2-right.glb"
+            }
+        },
+        "87": {
+            "link": {
+                "name": "texture_1",
+                "file": "models\\oculus-touch-v2-right.glb"
+            }
+        },
+        "288": {
+            "link": {
+                "name": "texture_0",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "289": {
+            "link": {
+                "name": "texture_1",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "290": {
+            "link": {
+                "name": "texture_2",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "291": {
+            "link": {
+                "name": "texture_3",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "292": {
+            "link": {
+                "name": "texture_4",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "293": {
+            "link": {
+                "name": "texture_5",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "294": {
+            "link": {
+                "name": "texture_6",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "295": {
+            "link": {
+                "name": "texture_7",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "296": {
+            "link": {
+                "name": "texture_8",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "297": {
+            "link": {
+                "name": "texture_9",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "298": {
+            "link": {
+                "name": "texture_10",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "299": {
+            "link": {
+                "name": "texture_11",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "300": {
+            "link": {
+                "name": "texture_12",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "301": {
+            "link": {
+                "name": "texture_13",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "302": {
+            "link": {
+                "name": "texture_14",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        }
+    },
+    "images": {
+        "42": {
+            "link": {
+                "name": "Image_0",
+                "file": "models\\oculus-touch-v2-left.glb"
+            },
+            "maxSize": [
+                1024,
+                1024
+            ]
+        },
+        "43": {
+            "link": {
+                "name": "Image_1",
+                "file": "models\\oculus-touch-v2-left.glb"
+            },
+            "maxSize": [
+                256,
+                256
+            ]
+        },
+        "84": {
+            "link": {
+                "name": "Image_0",
+                "file": "models\\oculus-touch-v2-right.glb"
+            },
+            "maxSize": [
+                1024,
+                1024
+            ]
+        },
+        "85": {
+            "link": {
+                "name": "Image_1",
+                "file": "models\\oculus-touch-v2-right.glb"
+            },
+            "maxSize": [
+                256,
+                256
+            ]
+        },
+        "273": {
+            "link": {
+                "name": "image_0",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "274": {
+            "link": {
+                "name": "image_1",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "275": {
+            "link": {
+                "name": "image_2",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "276": {
+            "link": {
+                "name": "image_3",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "277": {
+            "link": {
+                "name": "image_4",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "278": {
+            "link": {
+                "name": "image_5",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "279": {
+            "link": {
+                "name": "image_6",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "280": {
+            "link": {
+                "name": "image_7",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "281": {
+            "link": {
+                "name": "image_8",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "282": {
+            "link": {
+                "name": "image_9",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "283": {
+            "link": {
+                "name": "image_10",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "284": {
+            "link": {
+                "name": "image_11",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "285": {
+            "link": {
+                "name": "image_12",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "286": {
+            "link": {
+                "name": "image_13",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "287": {
+            "link": {
+                "name": "image_14",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        }
+    },
+    "materials": {
+        "DefaultFontMaterial": {
+            "link": {
+                "name": "DefaultFontMaterial",
+                "file": "default"
+            },
+            "Text": {
+                "effectColor": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "font": "230"
+            }
+        },
+        "20": {
+            "name": "White",
+            "shader": "Phong",
+            "Phong": {
+                "specularColor": [
+                    9.999899930335232e-7,
+                    9.99993744699168e-7,
+                    9.999999974752427e-7,
+                    1.0
+                ],
+                "shininess": 1
+            }
+        },
+        "22": {
+            "name": "Pink",
+            "Phong": {
+                "diffuseColor": [
+                    0.9098039,
+                    0.0,
+                    0.5411764,
+                    1.0
+                ],
+                "specularColor": [
+                    9.999899930335232e-7,
+                    9.999911299019004e-7,
+                    9.999999974752427e-7,
+                    1.0
+                ],
+                "shininess": 10,
+                "ambientColor": [
+                    0.317647,
+                    0.0,
+                    0.2165777,
+                    1.0
+                ]
+            }
+        },
+        "25": {
+            "name": "Yellow",
+            "Phong": {
+                "diffuseColor": [
+                    1.0,
+                    0.8039215,
+                    0.0,
+                    1.0
+                ],
+                "specularColor": [
+                    9.999999974752427e-7,
+                    9.999899930335232e-7,
+                    9.999899930335232e-7,
+                    1.0
+                ],
+                "ambientColor": [
+                    0.3843137,
+                    0.3089579,
+                    0.0,
+                    1.0
+                ]
+            }
+        },
+        "26": {
+            "name": "Green",
+            "Phong": {
+                "diffuseColor": [
+                    0.1529411,
+                    0.7882353,
+                    0.5411764,
+                    1.0
+                ],
+                "specularColor": [
+                    9.999999974752427e-7,
+                    9.999899930335232e-7,
+                    9.999899930335232e-7,
+                    1.0
+                ],
+                "ambientColor": [
+                    0.0,
+                    0.2352941,
+                    0.1437908,
+                    1.0
+                ]
+            }
+        },
+        "46": {
+            "link": {
+                "name": "skel_controller_materials_controllerMTL1",
+                "file": "models\\oculus-touch-v2-left.glb"
+            },
+            "name": "ControllerLeft"
+        },
+        "88": {
+            "link": {
+                "name": "skel_controller_materials_controllerMTL",
+                "file": "models\\oculus-touch-v2-right.glb"
+            },
+            "name": "ControllerRight"
+        },
+        "128": {
+            "name": "Cursor",
+            "shader": "Phong",
+            "Phong": {
+                "specularColor": [
+                    9.999899930335232e-7,
+                    9.99993744699168e-7,
+                    9.999999974752427e-7,
+                    1.0
+                ],
+                "shininess": 1,
+                "ambientColor": [
+                    0.7843137,
+                    0.7843137,
+                    0.7843137,
+                    1.0
+                ]
+            },
+            "pipeline": "37"
+        },
+        "131": {
+            "link": {
+                "name": "Default_Material",
+                "file": "models\\hand-left.glb"
+            },
+            "name": "HandLeft"
+        },
+        "164": {
+            "link": {
+                "name": "lambert2",
+                "file": "models\\hand-right.glb"
+            },
+            "name": "HandRight"
+        },
+        "201": {
+            "link": {
+                "name": "DefaultFontMaterial",
+                "file": "default"
+            },
+            "name": "TextAccent",
+            "Text": {
+                "color": [
+                    0.9098039,
+                    0.0,
+                    0.5411764,
+                    1.0
+                ],
+                "font": "230"
+            }
+        },
+        "202": {
+            "name": "Dark",
+            "shader": "Phong",
+            "Phong": {
+                "specularColor": [
+                    9.999899930335232e-7,
+                    9.99993744699168e-7,
+                    9.999999974752427e-7,
+                    1.0
+                ],
+                "shininess": 1,
+                "diffuseColor": [
+                    0.1686274,
+                    0.1686257,
+                    0.1686257,
+                    1.0
+                ],
+                "ambientColor": [
+                    0.0274509,
+                    0.0274507,
+                    0.0274507,
+                    1.0
+                ]
+            }
+        },
+        "203": {
+            "name": "GreenHover",
+            "Phong": {
+                "diffuseColor": [
+                    0.4894117,
+                    0.917647,
+                    0.7511102,
+                    1.0
+                ],
+                "specularColor": [
+                    9.999999974752427e-7,
+                    9.999899930335232e-7,
+                    9.999899930335232e-7,
+                    1.0
+                ],
+                "ambientColor": [
+                    0.0,
+                    0.3294117,
+                    0.2013071,
+                    1.0
+                ]
+            }
+        },
+        "206": {
+            "link": {
+                "name": "TeleportIndicator",
+                "file": "models\\teleport-indicator.glb"
+            },
+            "Phong": {
+                "diffuseColor": [
+                    0.6862745,
+                    0.6862676,
+                    0.6862676,
+                    1.0
+                ]
+            },
+            "pipeline": "34",
+            "Flat": {
+                "color": [
+                    0.8392156,
+                    0.8392072,
+                    0.8392072,
+                    1.0
+                ]
+            }
+        },
+        "303": {
+            "link": {
+                "name": "STONE_a",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "304": {
+            "link": {
+                "name": "charcters",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "305": {
+            "link": {
+                "name": "watermill",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "306": {
+            "link": {
+                "name": "terrain_left",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "307": {
+            "link": {
+                "name": "house",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "308": {
+            "link": {
+                "name": "bridge",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "309": {
+            "link": {
+                "name": "tree",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "310": {
+            "link": {
+                "name": "bush",
+                "file": "models\\baker_and_the_bridge.glb"
+            },
+            "pipeline": "38"
+        },
+        "311": {
+            "link": {
+                "name": "water",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "312": {
+            "link": {
+                "name": "terrain_right",
+                "file": "models\\baker_and_the_bridge.glb"
+            }
+        },
+        "313": {
+            "link": {
+                "name": "wheat",
+                "file": "models\\baker_and_the_bridge.glb"
+            },
+            "pipeline": "35"
+        },
+        "359": {
+            "name": "sky",
+            "pipeline": "356",
+            "Flat": {
+                "color": [
+                    0.9014567,
+                    0.9960784,
+                    0.7187389,
+                    1.0
+                ]
+            }
+        }
+    },
+    "shaders": {
+        "1": {
+            "link": {
+                "name": "DistanceFieldVector Textured.frag",
+                "file": "default"
+            }
+        },
+        "2": {
+            "link": {
+                "name": "Flat.frag",
+                "file": "default"
+            }
+        },
+        "3": {
+            "link": {
+                "name": "Flat Textured.frag",
+                "file": "default"
+            }
+        },
+        "4": {
+            "link": {
+                "name": "MeshVisualizer.frag",
+                "file": "default"
+            }
+        },
+        "5": {
+            "link": {
+                "name": "Phong.frag",
+                "file": "default"
+            }
+        },
+        "6": {
+            "link": {
+                "name": "Phong Textured.frag",
+                "file": "default"
+            }
+        },
+        "28": {
+            "link": {
+                "name": "Dynamic.vert",
+                "file": "default"
+            }
+        },
+        "29": {
+            "link": {
+                "name": "Particle Textured.frag",
+                "file": "default"
+            }
+        },
+        "30": {
+            "link": {
+                "name": "Skinning.vert",
+                "file": "default"
+            }
+        },
+        "31": {
+            "link": {
+                "name": "Static.frag",
+                "file": "default"
+            }
+        },
+        "32": {
+            "link": {
+                "name": "DistanceFieldVector.frag",
+                "file": "default"
+            }
+        },
+        "37": {
+            "link": {
+                "name": "Particle.frag",
+                "file": "default"
+            }
+        },
+        "217": {
+            "link": {
+                "name": "Background.frag",
+                "file": "default"
+            }
+        },
+        "218": {
+            "link": {
+                "name": "Depth.frag",
+                "file": "default"
+            }
+        },
+        "220": {
+            "link": {
+                "name": "FullScreenTriangle.vert",
+                "file": "default"
+            }
+        },
+        "221": {
+            "link": {
+                "name": "Physical.frag",
+                "file": "default"
+            }
+        },
+        "224": {
+            "link": {
+                "name": "Sky.frag",
+                "file": "default"
+            }
+        },
+        "225": {
+            "link": {
+                "name": "Text.frag",
+                "file": "default"
+            }
+        },
+        "227": {
+            "link": {
+                "name": "Text.vert",
+                "file": "default"
+            }
+        },
+        "228": {
+            "link": {
+                "name": "TileFeedback.frag",
+                "file": "default"
+            }
+        }
+    },
+    "settings": {
+        "project": {
+            "name": "wp",
+            "version": [
+                0,
+                9,
+                4
+            ]
+        },
+        "vr": {
+            "leftEyeObject": "18",
+            "rightEyeObject": "19"
+        },
+        "scripting": {
+            "sourcePaths": [
+                "/js/editor-components-bundle.js",
+                "js/"
+            ],
+            "useInternalBundler": false
+        },
+        "runtime": {
+            "visualizeColliders": false,
+            "webxr": {
+                "optionalFeatures": {
+                    "local-floor": true
+                }
+            }
+        },
+        "ar": {
+            "framework": "webxr"
+        },
+        "rendering": {
+            "clearColor": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        }
+    },
+    "animations": {},
+    "skins": {
+        "133": {
+            "link": {
+                "name": "Armature",
+                "file": "models\\hand-left.glb"
+            },
+            "name": "HandLeftSkin",
+            "joints": [
+                "139",
+                "140",
+                "141",
+                "142",
+                "143",
+                "144",
+                "145",
+                "146",
+                "147",
+                "148",
+                "149",
+                "150",
+                "151",
+                "152",
+                "153",
+                "154",
+                "155",
+                "156",
+                "157",
+                "158",
+                "159",
+                "160",
+                "161",
+                "162",
+                "163"
+            ]
+        },
+        "166": {
+            "link": {
+                "name": "Armature",
+                "file": "models\\hand-right.glb"
+            },
+            "name": "HandRightSkin",
+            "joints": [
+                "169",
+                "170",
+                "171",
+                "172",
+                "173",
+                "174",
+                "175",
+                "176",
+                "177",
+                "178",
+                "179",
+                "180",
+                "181",
+                "182",
+                "183",
+                "184",
+                "185",
+                "186",
+                "187",
+                "188",
+                "189",
+                "190",
+                "191",
+                "192",
+                "193"
+            ]
+        }
+    },
+    "pipelines": {
+        "33": {
+            "link": {
+                "name": "DistanceFieldVector",
+                "file": "default"
+            }
+        },
+        "34": {
+            "link": {
+                "name": "Flat Opaque",
+                "file": "default"
+            }
+        },
+        "35": {
+            "link": {
+                "name": "Flat Opaque Textured",
+                "file": "default"
+            },
+            "features": {
+                "ALPHA_MASKED": true,
+                "VERTEX_COLORS": false
+            }
+        },
+        "36": {
+            "link": {
+                "name": "MeshVisualizer",
+                "file": "default"
+            }
+        },
+        "37": {
+            "link": {
+                "name": "Phong Opaque",
+                "file": "default"
+            }
+        },
+        "38": {
+            "link": {
+                "name": "Phong Opaque Textured",
+                "file": "default"
+            }
+        },
+        "39": {
+            "link": {
+                "name": "Foliage",
+                "file": "default"
+            }
+        },
+        "40": {
+            "link": {
+                "name": "Particle",
+                "file": "default"
+            }
+        },
+        "219": {
+            "link": {
+                "name": "Depth",
+                "file": "default"
+            }
+        },
+        "222": {
+            "link": {
+                "name": "Physical Opaque",
+                "file": "default"
+            }
+        },
+        "223": {
+            "link": {
+                "name": "Physical Opaque Textured",
+                "file": "default"
+            },
+            "features": {
+                "ALPHA_MASKED": false
+            }
+        },
+        "226": {
+            "link": {
+                "name": "Text",
+                "file": "default"
+            }
+        },
+        "229": {
+            "link": {
+                "name": "Sky",
+                "file": "default"
+            }
+        },
+        "231": {
+            "link": {
+                "name": "Phong Normalmapped",
+                "file": "default"
+            }
+        },
+        "232": {
+            "link": {
+                "name": "Phong Lightmapped",
+                "file": "default"
+            }
+        },
+        "356": {
+            "link": {
+                "name": "Flat Opaque",
+                "file": "default"
+            },
+            "doubleSided": true,
+            "name": "skySimple"
+        }
+    },
+    "files": [
+        "models/oculus-touch-v2-left.glb",
+        "models/oculus-touch-v2-right.glb",
+        "models/hand-left.glb",
+        "models/hand-right.glb",
+        "models/button.glb",
+        "models/teleport-indicator.glb",
+        "models/baker_and_the_bridge.glb"
+    ],
+    "fonts": {
+        "230": {
+            "link": {
+                "name": "DejaVuSans.ttf",
+                "file": "default"
+            }
+        }
+    }
+}
